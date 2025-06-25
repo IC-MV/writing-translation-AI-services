@@ -1,355 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>John J. Doe D.</title>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Encode+Sans:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root{
-    --emerald:#50C878;
-    --emerald-dark:#3ca966;
-    --emerald-light:#7fd99b;
-    --grey:#555;
-    --grey-light:#888;
-    --black:#000;
-    --duration:0.8s;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{
-    font-family:"Nunito Sans","Open Sans","Encode Sans",sans-serif;
-    color:var(--black);
-    background-color:#fff;
-}
-header{
-    position:relative;
-    padding:1rem 2rem;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-.burger{
-    width:30px;
-    height:22px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    cursor:pointer;
-}
-.burger span{
-    display:block;
-    height:4px;
-    background:var(--emerald);
-    border-radius:2px;
-    transition:transform 0.3s ease;
-}
-nav{
-    position:fixed;
-    top:0;
-    right:-220px;
-    width:200px;
-    height:100vh;
-    background:#fff;
-    box-shadow:-2px 0 8px rgba(0,0,0,.1);
-    display:flex;
-    flex-direction:column;
-    padding:4rem 1rem;
-    gap:1.5rem;
-    transition:right 0.3s ease;
-    z-index:10;
-}
-nav a{
-    text-decoration:none;
-    font-weight:700;
-    color:var(--grey);
-    transition:color 0.2s;
-}
-nav a:hover{color:var(--emerald-dark);} 
-nav.open{right:0;}
-.burger.open span:nth-child(1){transform:translateY(9px) rotate(45deg);} 
-.burger.open span:nth-child(2){opacity:0;} 
-.burger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg);} 
-.langs{
-    display:flex;
-    gap:2rem;
-    justify-content:center;
-    width:100%;
-}
-.lang{
-    width:140px;
-    height:60px;
-    cursor:default;
-}
-.lang text{
-    fill:var(--grey);
-    font-style:italic;
-    font-size:1.1rem;
-    text-anchor:middle;
-    dominant-baseline:middle;
-    transition:fill 0.2s;
-}
-.lang:hover text{
-    fill:var(--emerald-dark);
-}
-.lang:hover text tspan.original{display:none;}
-.lang:hover text tspan.hovered{display:inline;}
- tspan.hovered{display:none;}
- /* Hero image rectangle */
- .hero-img{
-    position:relative;
-    width:100%;
-    height:300px;
-    background:var(--grey-light);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
- }
- .hero-img img{
-    width:300px;
-    height:300px;
-    border-radius:50%;
-    object-fit:cover;
-    border:6px solid var(--emerald);
- }
- /* Name line */
- .name-line{
-    padding:1rem 2rem;
-    text-align:center;
-    font-weight:700;
-    color:var(--grey);
- }
- /* Sections */
- section{
-    padding:3rem 2rem;
-    display:flex;
-    gap:2rem;
-    align-items:flex-start;
- }
- section h2{
-    font-size:1.5rem;
-    color:var(--emerald);
-    white-space:nowrap;
- }
- .cards{
-    display:flex;
-    gap:1.5rem;
-    flex-wrap:wrap;
- }
- /* flip card */
- .flip{
-    width:200px;
-    height:120px;
-    perspective:1000px;
- }
- .flip-inner{
-    position:relative;
-    width:100%;
-    height:100%;
-    transition:transform var(--duration);
-    transform-style:preserve-3d;
- }
- .flip:hover .flip-inner{
-    transform:rotateY(180deg);
- }
- .flip-face{
-    position:absolute;
-    width:100%;
-    height:100%;
-    backface-visibility:hidden;
-    border:2px solid var(--emerald);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:700;
-    color:var(--emerald-dark);
-    background:#fff;
-    border-radius:8px;
- }
- .flip-back{
-    transform:rotateY(180deg);
-    color:var(--grey);
-    font-weight:400;
- }
- /* example cards */
- .examples{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:1rem;
- }
- .example-card{
-    border:2px solid var(--grey-light);
-    padding:1rem;
-    text-align:center;
-    font-weight:700;
-    cursor:pointer;
-    transition:background 0.2s,border-color 0.2s;
- }
- .example-card:hover{
-    background:var(--emerald-light);
-    border-color:var(--emerald-dark);
- }
- /* Footer */
- footer{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:1rem 2rem;
-    background:var(--grey-light);
- }
- footer a, footer span{
-    color:var(--black);
-    text-decoration:none;
-    font-weight:700;
- }
- footer .logo-placeholder{
-    width:76px;
-    height:76px;
-    background:#fff;
-    border:2px dashed var(--grey);
- }
- /* Responsive adjustments */
- @media(max-width:800px){
-    .langs{flex-direction:column;height:200px;}
-    .examples{grid-template-columns:repeat(2,1fr);} 
-    .cards{flex-direction:column;}
-    section{flex-direction:column;}
- }
-</style>
+  <meta charset="UTF-8">
+  <title>John J. Doe D. - Multilingual Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-top:#f6a3a4;
+      --bg-mid:#f9e4e4;
+      --bg-bottom:#9fd7f9;
+      --font-main:'Nunito Sans', 'Open Sans', sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:var(--font-main);}
+    body{
+      min-height:100vh;
+      background:linear-gradient(180deg,var(--bg-top) 0%, var(--bg-mid) 40%, var(--bg-bottom) 100%);
+      color:#222;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:4rem;
+      padding:2rem;
+    }
+    /* SECTION 1 */
+    .bubbles{display:flex;gap:1.5rem;}
+    .bubble{
+      width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,0.7);
+      display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+      font-weight:600;box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      opacity:0;transform:translateX(-120%);animation:slideIn 0.8s forwards;
+    }
+    .bubble:nth-child(2){animation-delay:0.2s;}
+    .bubble:nth-child(3){animation-delay:0.4s;}
+    .bubble:nth-child(4){animation-delay:0.6s;}
+    @keyframes slideIn{to{opacity:1;transform:translateX(0);}}
+
+    /* SECTION 2 */
+    .profile{display:flex;flex-direction:column;align-items:center;gap:1rem;}
+    .profile img{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,0.8);box-shadow:0 6px 12px rgba(0,0,0,0.15);}
+    .profile .title{max-width:800px;text-align:center;font-weight:600;}
+
+    /* SECTION 3 */
+    .services{display:flex;justify-content:space-between;align-items:flex-start;width:100%;max-width:1000px;gap:2rem;}
+    .services h2{font-size:1.75rem;line-height:1.3;white-space:pre-line;}
+    .service-cards{display:flex;gap:1rem;flex-wrap:wrap;}
+
+    /* Card stack (no flip) */
+    .card{width:200px;height:120px;position:relative;}
+    .card-inner{position:relative;width:100%;height:100%;}
+    .card-face{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;display:flex;justify-content:center;align-items:center;text-align:center;padding:0.5rem;background:rgba(255,255,255,0.85);box-shadow:0 4px 8px rgba(0,0,0,0.1);font-weight:600;transition:opacity 0.4s ease;}
+    .card-face.front{opacity:1;}
+    .card-face.back{opacity:0;}
+    .card:hover .card-face.front{opacity:0;}
+    .card:hover .card-face.back{opacity:1;}
+
+    /* SECTION 4 */
+    .portfolio{display:flex;justify-content:space-between;align-items:flex-start;width:100%;max-width:1000px;gap:2rem;flex-wrap:wrap;}
+    .portfolio h2{font-size:1.6rem;line-height:1.3;white-space:pre-line;}
+    .portfolio-cards{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:120px;gap:1rem;}
+    .portfolio-card{background:rgba(255,255,255,0.8);display:flex;justify-content:center;align-items:center;text-align:center;padding:0.5rem;border-radius:12px;font-weight:600;box-shadow:0 4px 8px rgba(0,0,0,0.1);transition:transform 0.3s;}
+    .portfolio-card:hover{transform:translateY(-6px);}
+
+    /* SECTION 5 */
+    footer{width:100%;max-width:1000px;display:flex;justify-content:space-between;align-items:center;font-weight:600;gap:1rem;}
+    footer a{color:inherit;text-decoration:none;}
+    .footer-img{width:76px;height:76px;background:#fff;border:2px dashed #ccc;border-radius:8px;}
+
+    @media(max-width:768px){
+      .services,.portfolio{flex-direction:column;}
+      .service-cards,.portfolio-cards{justify-content:center;}
+      .portfolio-cards{grid-template-columns:repeat(2,1fr);}
+    }
+  </style>
 </head>
 <body>
+  <!-- Section 1 -->
+  <section class="bubbles">
+    <div class="bubble"><span>ESPAÑOL<br>Native/Nativo</span></div>
+    <div class="bubble"><span>FRANÇAIS<br>Native/Nativo</span></div>
+    <div class="bubble"><span>ENGLISH<br>C1</span></div>
+    <div class="bubble"><span>DEUTSCH<br>C1</span></div>
+  </section>
 
-<header>
-<div class="langs">
-    <!-- ESPAÑOL concave -->
-    <svg class="lang" viewBox="0 0 200 100">
-        <defs>
-            <path id="concave1" d="M10,90 Q100,10 190,90" />
-        </defs>
-        <text>
-            <textPath href="#concave1" startOffset="50%">
-                <tspan class="original">ESPAÑOL</tspan>
-                <tspan class="hovered">Native/Nativo</tspan>
-            </textPath>
-        </text>
-    </svg>
-    <!-- FRANÇAIS convex -->
-    <svg class="lang" viewBox="0 0 200 100">
-        <defs>
-            <path id="convex1" d="M10,10 Q100,90 190,10" />
-        </defs>
-        <text>
-            <textPath href="#convex1" startOffset="50%">
-                <tspan class="original">FRANÇAIS</tspan>
-                <tspan class="hovered">Native/Nativo</tspan>
-            </textPath>
-        </text>
-    </svg>
-    <!-- ENGLISH concave -->
-    <svg class="lang" viewBox="0 0 200 100">
-        <defs>
-            <path id="concave2" d="M10,90 Q100,10 190,90" />
-        </defs>
-        <text>
-            <textPath href="#concave2" startOffset="50%">
-                <tspan class="original">ENGLISH</tspan>
-                <tspan class="hovered">C1</tspan>
-            </textPath>
-        </text>
-    </svg>
-    <!-- DEUTSCH convex -->
-    <svg class="lang" viewBox="0 0 200 100">
-        <defs>
-            <path id="convex2" d="M10,10 Q100,90 190,10" />
-        </defs>
-        <text>
-            <textPath href="#convex2" startOffset="50%">
-                <tspan class="original">DEUTSCH</tspan>
-                <tspan class="hovered">C1</tspan>
-            </textPath>
-        </text>
-    </svg>
-</div>
+  <!-- Section 2 -->
+  <section class="profile">
+    <img src="https://via.placeholder.com/160" alt="Profile picture placeholder">
+    <div class="title">John J. Doe D. ׀ Multilingual professional / Profesional multilingüe ׀ Translator / Traductora, MA ׀ Biologist / Bióloga, BSc Hons</div>
+  </section>
 
-<div class="burger" id="burger">
-  <span></span><span></span><span></span>
-</div>
-</header>
-
-<nav id="nav">
-    <a href="#services">My Services/Mis servicios</a>
-    <a href="#examples">Creative writing examples/Ejemplos de escritura creativa</a>
-    <a href="#contact">Contact/Contacto &amp; CV</a>
-</nav>
-
-<div class="hero-img">
-    <img src="https://via.placeholder.com/300" alt="Profile placeholder">
-</div>
-
-<div class="name-line">
-    John J. Doe D. ׀ Multilingual professional/Profesional multilingüe ׀ Translator/Traductora, MA ׀ Biologist/Bióloga, BSc Hons
-</div>
-
-<main>
-
-<section id="services">
-    <h2>My services/Mis servicios</h2>
-    <div class="cards">
-        <div class="flip">
-            <div class="flip-inner">
-                <div class="flip-face">Creative Writing/Escritura creativa</div>
-                <div class="flip-face flip-back">[Placeholder for text]</div>
-            </div>
+  <!-- Section 3 -->
+  <section class="services">
+    <h2>My services /<br>Mis servicios</h2>
+    <div class="service-cards">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face front">Creative Writing /<br>Escritura creativa</div>
+          <div class="card-face back">Publicaciones en<br>LinkedIn posts</div>
         </div>
-        <div class="flip">
-            <div class="flip-inner">
-                <div class="flip-face">Translation/Traducción</div>
-                <div class="flip-face flip-back">[Placeholder for text]</div>
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face front">Translation /<br>Traducción</div>
+          <div class="card-face back">EN / DE – ES / FR<br>Marketing, life Sciences and more / marketing, ciencias de la vida y más</div>
         </div>
-        <div class="flip">
-            <div class="flip-inner">
-                <div class="flip-face">AI/IA</div>
-                <div class="flip-face flip-back">[Placeholder for text]</div>
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face front">AI / IA</div>
+          <div class="card-face back">[Placeholder]</div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="examples">
-    <h2>Creative writing examples/Ejemplos de escritura creativa</h2>
-    <div class="examples">
-        <!-- First row English -->
-        <a href="#" class="example-card">English</a>
-        <a href="#" class="example-card">English</a>
-        <a href="#" class="example-card">English</a>
-        <a href="#" class="example-card">English</a>
-        <a href="#" class="example-card">English</a>
-        <!-- Second row Español -->
-        <a href="#" class="example-card">Español</a>
-        <a href="#" class="example-card">Español</a>
-        <a href="#" class="example-card">Español</a>
-        <a href="#" class="example-card">Español</a>
-        <a href="#" class="example-card">Español</a>
+  <!-- Section 4 -->
+  <section class="portfolio">
+    <h2>Creative writing examples /<br>Ejemplos de escritura creativa</h2>
+    <div class="portfolio-cards">
+      <a href="#" class="portfolio-card">Thank you gen AI course</a>
+      <a href="#" class="portfolio-card">Non-AI-made posts</a>
+      <a href="#" class="portfolio-card">Post-editing vs translation</a>
+      <a href="#" class="portfolio-card">Anthropic’s Amodei’s predictions</a>
+      <a href="#" class="portfolio-card">Gracias al curso de IA gen</a>
+      <a href="#" class="portfolio-card">FOMO, FOBO y lo irremplazable de la IA</a>
+      <a href="#" class="portfolio-card">Portafolio web gatuno</a>
+      <a href="#" class="portfolio-card">Evolución profesional</a>
     </div>
-</section>
+  </section>
 
-</main>
-
-<footer id="contact">
-    <span>Contact/Contacto xxx@gmail.com</span>
+  <!-- Section 5 -->
+  <footer>
+    <div>Contact / Contacto xxx@gmail.com</div>
     <a href="#">CV</a>
-    <div class="logo-placeholder"></div>
-</footer>
-
-<script>
-const burger=document.getElementById('burger');
-const nav=document.getElementById('nav');
-burger.addEventListener('click',()=>{
-    burger.classList.toggle('open');
-    nav.classList.toggle('open');
-});
-</script>
-
+    <div class="footer-img"></div>
+  </footer>
 </body>
 </html>
