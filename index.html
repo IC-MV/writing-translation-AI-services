@@ -74,7 +74,7 @@
             align-items: center;
             top: 0;
             left: 0;
-            font-size: 1.25rem;
+            font-size: 1.25rem; /* Only front text enlarged */
         }
          .service-card .back-text {
             transition: opacity 0.3s ease-in-out;
@@ -86,7 +86,7 @@
             align-items: center;
             top: 0;
             left: 0;
-            opacity: 0;
+            opacity: 0; /* font-size now inherits default */
         }
         .service-card:hover .front-text {
             opacity: 0;
@@ -148,7 +148,7 @@
                 <div class="back-text">From English & German<br>into Spanish & French<br><br>No AI needed!</div>
             </div>
             <div class="card service-card relative overflow-hidden h-40 w-64 flex-shrink-0">
-                <div class="front-text">And finally... Yes AI!</div>
+                <div class="front-text">And finally...<br>Yes AI!</div>
                 <div class="back-text">Julius · Botpress · Ideogram<br>Canva · Make · Resend<br><br>ChatGPT · Claude<br>Gemini · DeepSeek</div>
             </div>
         </div>
