@@ -7,14 +7,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* -------------------------------------------------- */
+        /*  Global styles & background                        */
+        /* -------------------------------------------------- */
         body {
             font-family: 'Nunito Sans', 'Open Sans', sans-serif;
+            /* Gradient background (bottom‑most layer) */
             background: linear-gradient(to bottom, #FFC0CB, #ADD8E6, #F0F8FF);
             background-attachment: fixed;
             background-position: center;
             overflow-x: hidden;
+            position: relative; /* create stacking context for ::before pattern overlay */
+            z-index: 1; /* keep page content above ::before pattern */
         }
 
+        /*  Pattern overlay (sits ON TOP of gradient, but below all content)  */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: url('https://raw.githubusercontent.com/IC-MV/writing-translation-AI-services/main/Plant%20background.jpeg');
+            background-repeat: repeat;
+            /* Adjust size to taste: smaller = denser pattern */
+            background-size: 350px;
+            opacity: 0.18; /* see‑through so gradient remains visible */
+            pointer-events: none; /* overlay does not block interactions */
+            z-index: 0; /* behind everything inside <body> */
+        }
+
+        /* -------------------------------------------------- */
+        /*  Decorative bubbles & cards                        */
+        /* -------------------------------------------------- */
         .bubble {
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 9999px;
@@ -176,12 +199,4 @@
     </section>
 
     <section id="contact" class="w-full max-w-7xl flex flex-col sm:flex-row items-center justify-evenly p-4 text-[#4B5563]">
-        <p class="text-lg font-semibold mb-4 sm:mb-0">Contact <a href="mailto:xxx@gmail.com" class="text-[#4B5563] hover:underline">xxx@gmail.com</a></p>
-        <p class="text-lg font-semibold mb-4 sm:mb-0"><a href="#" class="text-[#4B5563] hover:underline">CV</a></p>
-        <div class="w-8 h-8 flex-shrink-0">
-            <img src="https://placehold.co/32x32/FFC0CB/000000?text=Img" alt="Small Image Placeholder" class="w-full h-full object-cover">
-        </div>
-    </section>
-
-</body>
-</html>
+        <p class="text-lg font-semibold mb-4 sm:mb-0">Contact <a href="mailto:xxx@gmail.com" class="text-[#4B5563] hover:underline">xxx@gmail.com
