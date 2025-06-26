@@ -7,38 +7,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* -------------------------------------------------- */
-        /*  Global styles & background                        */
-        /* -------------------------------------------------- */
+        /* --- Base layout and gradient --- */
         body {
+            position: relative; /* needed for ::before overlay */
             font-family: 'Nunito Sans', 'Open Sans', sans-serif;
-            /* Gradient background (bottom‑most layer) */
             background: linear-gradient(to bottom, #FFC0CB, #ADD8E6, #F0F8FF);
             background-attachment: fixed;
             background-position: center;
             overflow-x: hidden;
-            position: relative; /* create stacking context for ::before pattern overlay */
-            z-index: 1; /* keep page content above ::before pattern */
         }
 
-        /*  Pattern overlay (sits ON TOP of gradient, but below all content)  */
+        /* --- Pattern overlay --- */
         body::before {
             content: "";
             position: fixed;
             inset: 0;
-            background-image: url('https://github.com/IC-MV/writing-translation-AI-services/blob/main/Plant%20background.jpeg');
-            /* Make pattern adaptively fill any viewport */
-            background-size: cover;      /* always cover the full screen */
-            background-position: top;
-            background-repeat: no-repeat;/* prevent tiling */
-            opacity: 0.18; /* see‑through so gradient remains visible */
-            pointer-events: none; /* overlay does not block interactions */
-            z-index: 0; /* behind everything inside <body> */
+            background: url('https://raw.githubusercontent.com/IC-MV/writing-translation-AI-services/main/Plant%20background.jpeg') center/cover no-repeat;
+            opacity: 0.2; /* tweak this value for stronger / lighter pattern visibility */
+            pointer-events: none; /* ensures clicks go through */
+            z-index: -1; /* keeps overlay beneath page content */
         }
 
-        /* -------------------------------------------------- */
-        /*  Decorative bubbles & cards                        */
-        /* -------------------------------------------------- */
+        /* --- Animated language bubbles --- */
         .bubble {
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 9999px;
@@ -64,11 +54,9 @@
         .bubble span {
             display: block;
         }
-
         .bubble i {
             font-style: italic;
         }
-
         @keyframes slideIn {
             to {
                 opacity: 1;
@@ -76,6 +64,7 @@
             }
         }
 
+        /* --- Reusable card component --- */
         .card {
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 0.75rem;
@@ -88,6 +77,8 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+
+        /* --- Service cards flip text --- */
         .service-card .front-text, .service-card {
             transition: opacity 0.3s ease-in-out;
             position: absolute;
@@ -100,7 +91,7 @@
             left: 0;
             font-size: 1.25rem;
         }
-         .service-card .back-text {
+        .service-card .back-text {
             transition: opacity 0.3s ease-in-out;
             position: absolute;
             width: 100%;
@@ -122,7 +113,6 @@
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center py-8">
-
 <!-- Hamburger Menu -->
     <div class="absolute top-4 right-4 z-50">
         <div class="relative group">
@@ -139,7 +129,7 @@
         </div>
     </div>
     <!-- Page Content Starts -->
-    
+
     <section id="professional-info" class="flex flex-col items-center mb-6 px-4">
         <p class="text-xl font-semibold text-[#4B5563] text-center leading-relaxed">
             John J. Doe D. | Multilingual professional | Translator, MA | Biologist, BSc Hons
@@ -200,7 +190,7 @@
     </section>
 
     <section id="contact" class="w-full max-w-7xl flex flex-col sm:flex-row items-center justify-evenly p-4 text-[#4B5563]">
-        <p class="text-lg font-semibold mb-4 sm:mb-0">Contact <a href="mailto:xxx@gmail.com" class="text-[#4B5563] hover:underline">xxx@gmail.com class="text-[#4B5563] hover:underline">xxx@gmail.com</a></p>
+        <p class="text-lg font-semibold mb-4 sm:mb-0">Contact <a href="mailto:xxx@gmail.com" class="text-[#4B5563] hover:underline">xxx@gmail.com</a></p>
         <p class="text-lg font-semibold mb-4 sm:mb-0"><a href="#" class="text-[#4B5563] hover:underline">CV</a></p>
         <div class="w-8 h-8 flex-shrink-0">
             <img src="https://placehold.co/32x32/FFC0CB/000000?text=Img" alt="Small Image Placeholder" class="w-full h-full object-cover">
