@@ -9,32 +9,15 @@
     <style>
         body {
             font-family: 'Nunito Sans', 'Open Sans', sans-serif;
-            /* Existing gradient background */
-            background: linear-gradient(to bottom, #FFC0CB, #ADD8E6, #F0F8FF); /* Soft pink, light blue, very light blue/white */
+            background: linear-gradient(to bottom, #FFC0CB, #ADD8E6, #F0F8FF);
             background-attachment: fixed;
             background-position: center;
-            overflow-x: hidden; /* Prevent horizontal scroll */
-            /* position: relative; Removed */
+            overflow-x: hidden;
         }
-
-        /* Pseudo-element for the opaque image background - Removed */
-        /* body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Your+Opaque+Background+Image');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.2;
-            z-index: -1;
-        } */
 
         .bubble {
             background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 9999px; /* Tailwind's rounded-full */
+            border-radius: 9999px;
             width: 150px;
             height: 150px;
             display: flex;
@@ -42,7 +25,7 @@
             align-items: center;
             text-align: center;
             font-weight: bold;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Tailwind's shadow-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             opacity: 0;
             transform: translateX(-100%);
             animation: slideIn 1s forwards;
@@ -61,15 +44,15 @@
 
         .card {
             background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 0.75rem; /* Tailwind's rounded-xl */
-            padding: 1.5rem; /* Tailwind's p-6 */
+            border-radius: 0.75rem;
+            padding: 1.5rem;
             text-align: center;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Tailwind's shadow-md */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Tailwind's shadow-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         .service-card .front-text, .service-card .back-text {
             transition: opacity 0.3s ease-in-out;
@@ -95,63 +78,58 @@
 </head>
 <body class="min-h-screen flex flex-col items-center py-8">
 
-    <!-- Section: Professional Information (Moved Up) -->
     <section id="professional-info" class="flex flex-col items-center mb-6 px-4">
         <p class="text-xl font-semibold text-gray-800 text-center leading-relaxed">
-            John J. Doe D. ׀ Multilingual professional / Profesional multilingüe ׀ Translator / Traductora, MA ׀ Biologist / Bióloga, BSc Hons
+            John J. Doe D. | Multilingual professional | Translator, MA | Biologist, BSc Hons
         </p>
     </section>
 
-    <!-- Section: Profile Picture (Moved Up) -->
     <section id="profile-picture" class="flex flex-col items-center mb-12 px-4">
         <div class="rounded-full overflow-hidden w-48 h-48 mb-6 border-4 border-white shadow-lg">
             <img src="https://placehold.co/192x192/FFC0CB/000000?text=Your+Picture" alt="Your Picture" class="w-full h-full object-cover">
         </div>
     </section>
 
-    <!-- Section: Bubbles with motion effect (Moved Up) -->
     <section id="languages" class="w-full max-w-7xl flex justify-center space-x-6 mb-20 p-4">
-        <div class="bubble flex-shrink-0">ESPAÑOL<br>Native/Nativo</div>
-        <div class="bubble flex-shrink-0">FRANÇAIS<br>Native/Nativo</div>
+        <div class="bubble flex-shrink-0">ESPAÑOL<br>native</div>
+        <div class="bubble flex-shrink-0">FRANÇAIS<br>native</div>
         <div class="bubble flex-shrink-0">ENGLISH<br>C1</div>
         <div class="bubble flex-shrink-0">DEUTSCH<br>C1</div>
     </section>
 
-    <!-- Section 3: My Services (Centered) -->
     <section id="services" class="w-full max-w-7xl flex flex-col items-center mb-20 p-4">
         <div class="text-3xl font-bold text-gray-800 mb-8 text-center flex-shrink-0">
-            My services /<br>Mis servicios
+            My services
         </div>
         <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 w-full md:w-auto justify-center">
             <div class="card service-card relative overflow-hidden h-40 w-64 flex-shrink-0">
-                <div class="front-text">Creative Writing /<br>Escritura creativa</div>
-                <div class="back-text">Publicaciones en LinkedIn posts</div>
+                <div class="front-text">Non-AI creative writing</div>
+                <div class="back-text">As a former scientist,<br>I carry out the research needed.<br>I'm up for every challenge!</div>
             </div>
             <div class="card service-card relative overflow-hidden h-40 w-64 flex-shrink-0">
-                <div class="front-text">Translation / Traducción</div>
-                <div class="back-text">EN / DE – ES /FR Marketing,<br>life Sciences and more /<br>marketing, ciencias de la vida y más</div>
+                <div class="front-text">Translation</div>
+                <div class="back-text">From<br>English/German/French/Spanish<br>into Spanish & French<br>No AI needed!</div>
             </div>
             <div class="card service-card relative overflow-hidden h-40 w-64 flex-shrink-0">
-                <div class="front-text">AI / IA</div>
-                <div class="back-text">AI services placeholder text</div>
+                <div class="front-text">AI</div>
+                <div class="back-text">Website/portfolio building<br>Data analysis/extraction<br>Reporting & visualization<br>Website chatbot building<br>Automations<br>Image generation & editing</div>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: Creative Writing Examples (Centered) -->
     <section id="examples" class="w-full max-w-7xl flex flex-col items-center mb-20 p-4">
         <div class="text-3xl font-bold text-gray-800 mb-8 text-center flex-shrink-0">
-            Creative writing examples /<br>Ejemplos de escritura creativa
+            Creative writing examples
         </div>
         <div class="flex flex-col space-y-6 w-full md:w-auto justify-center">
             <div class="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6">
                 <a href="#" class="card w-64 flex-shrink-0">Thank you gen AI course</a>
                 <a href="#" class="card w-64 flex-shrink-0">Non-AI-made posts</a>
                 <a href="#" class="card w-64 flex-shrink-0">Post-editing vs translation</a>
-                <a href="#" class="card w-64 flex-shrink-0">Anthropic’s Amodei’s predicitons</a>
+                <a href="#" class="card w-64 flex-shrink-0">Anthropic’s Amodei’s predictions</a>
             </div>
             <div class="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6">
-                <a href="#" class="card w-64 flex-shrink-0">Gracias al curso de IA gen</a>
+                <a href="#" class="card w-64 flex-shrink-0">Gracias, curso de IA gen</a>
                 <a href="#" class="card w-64 flex-shrink-0">FOMO, FOBO y lo irremplazable de la IA</a>
                 <a href="#" class="card w-64 flex-shrink-0">Portafolio web gatuno</a>
                 <a href="#" class="card w-64 flex-shrink-0">Evolución profesional</a>
@@ -159,9 +137,8 @@
         </div>
     </section>
 
-    <!-- Section 5: Contact Info (Remains as is) -->
     <section id="contact" class="w-full max-w-7xl flex flex-col sm:flex-row items-center justify-evenly p-4 text-gray-800">
-        <p class="text-lg font-semibold mb-4 sm:mb-0">Contact / Contacto <a href="mailto:xxx@gmail.com" class="text-blue-600 hover:underline">xxx@gmail.com</a></p>
+        <p class="text-lg font-semibold mb-4 sm:mb-0">Contact <a href="mailto:xxx@gmail.com" class="text-blue-600 hover:underline">xxx@gmail.com</a></p>
         <p class="text-lg font-semibold mb-4 sm:mb-0"><a href="#" class="text-blue-600 hover:underline">CV</a></p>
         <div class="w-8 h-8 flex-shrink-0">
             <img src="https://placehold.co/32x32/FFC0CB/000000?text=Img" alt="Small Image Placeholder" class="w-full h-full object-cover">
