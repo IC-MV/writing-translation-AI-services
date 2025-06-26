@@ -88,6 +88,23 @@
 </head>
 <body class="min-h-screen flex flex-col items-center py-8">
 
+<!-- Hamburger Menu -->
+    <div class="absolute top-4 right-4 z-50">
+        <div class="relative group">
+            <button class="flex flex-col space-y-1">
+                <span class="block w-6 h-0.5 bg-gray-700"></span>
+                <span class="block w-6 h-0.5 bg-gray-700"></span>
+                <span class="block w-6 h-0.5 bg-gray-700"></span>
+            </button>
+            <div class="absolute right-0 mt-2 w-48 bg-white rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">My services</a>
+                <a href="#examples" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Creative writing examples</a>
+                <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact & CV</a>
+            </div>
+        </div>
+    </div>
+    <!-- Page Content Starts -->
+    
     <section id="professional-info" class="flex flex-col items-center mb-6 px-4">
         <p class="text-xl font-semibold text-[#4B5563] text-center leading-relaxed">
             John J. Doe D. | Multilingual professional | Translator, MA | Biologist, BSc Hons
