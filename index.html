@@ -26,10 +26,11 @@
             content: "";
             position: fixed;
             inset: 0;
-            background-image: url('https://raw.githubusercontent.com/IC-MV/writing-translation-AI-services/main/Plant%20background.jpeg');
-            background-repeat: repeat;
-            /* Adjust size to taste: smaller = denser pattern */
-            background-size: 350px;
+            background-image: url('https://github.com/IC-MV/writing-translation-AI-services/blob/main/Plant%20background.jpeg');
+            /* Make pattern adaptively fill any viewport */
+            background-size: cover;      /* always cover the full screen */
+            background-position: top;
+            background-repeat: no-repeat;/* prevent tiling */
             opacity: 0.18; /* see‑through so gradient remains visible */
             pointer-events: none; /* overlay does not block interactions */
             z-index: 0; /* behind everything inside <body> */
