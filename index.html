@@ -21,10 +21,12 @@
             width: 150px;
             height: 150px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            font-weight: bold;
+            font-weight: normal;
+            color: #4B5563;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             opacity: 0;
             transform: translateX(-100%);
@@ -34,6 +36,14 @@
         .bubble:nth-child(2) { animation-delay: 0.4s; }
         .bubble:nth-child(3) { animation-delay: 0.6s; }
         .bubble:nth-child(4) { animation-delay: 0.8s; }
+
+        .bubble span {
+            display: block;
+        }
+
+        .bubble i {
+            font-style: italic;
+        }
 
         @keyframes slideIn {
             to {
@@ -91,10 +101,10 @@
     </section>
 
     <section id="languages" class="w-full max-w-7xl flex justify-center space-x-6 mb-20 p-4">
-        <div class="bubble flex-shrink-0">ESPAÑOL<br>native</div>
-        <div class="bubble flex-shrink-0">FRANÇAIS<br>native</div>
-        <div class="bubble flex-shrink-0">ENGLISH<br>C1</div>
-        <div class="bubble flex-shrink-0">DEUTSCH<br>C1</div>
+        <div class="bubble flex-shrink-0"><span>ESPAÑOL</span><span><i>native</i></span></div>
+        <div class="bubble flex-shrink-0"><span>FRANÇAIS</span><span><i>native</i></span></div>
+        <div class="bubble flex-shrink-0"><span>ENGLISH</span><span><i>C1</i></span></div>
+        <div class="bubble flex-shrink-0"><span>DEUTSCH</span><span><i>C1</i></span></div>
     </section>
 
     <section id="services" class="w-full max-w-7xl flex flex-col items-center mb-20 p-4">
@@ -123,16 +133,16 @@
         </div>
         <div class="flex flex-col space-y-6 w-full md:w-auto justify-center">
             <div class="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6">
-                <a href="#" class="card w-64 flex-shrink-0">Thank you gen AI course</a>
-                <a href="#" class="card w-64 flex-shrink-0">Non-AI-made posts</a>
-                <a href="#" class="card w-64 flex-shrink-0">Post-editing vs translation</a>
-                <a href="#" class="card w-64 flex-shrink-0">Anthropic’s Amodei’s<br>predictions</a>
+                <a href="#" title="[URL placeholder]" class="card w-64 flex-shrink-0">Thank you gen AI course</a>
+                <a href="#" title="[URL placeholder]" class="card w-64 flex-shrink-0">Non-AI-made posts</a>
+                <a href="#" title="[URL placeholder]" class="card w-64 flex-shrink-0">Post-editing vs translation</a>
+                <a href="#" title="[URL placeholder]" class="card w-64 flex-shrink-0">Anthropic’s Amodei’s<br>predictions</a>
             </div>
             <div class="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6">
-                <a href="#" class="card w-64 flex-shrink-0">Gracias, curso de IA gen</a>
-                <a href="#" class="card w-64 flex-shrink-0">FOMO, FOBO y<br>lo irremplazable en la IA</a>
-                <a href="#" class="card w-64 flex-shrink-0">Portafolio web gatuno</a>
-                <a href="#" class="card w-64 flex-shrink-0">Evolución profesional</a>
+                <a href="#" title="[URL placeholder]" class="card w-64 flex-shrink-0">Gracias, curso de IA gen</a>
+                <a href="#" title="[URL placeholder]" class="card w-64 flex-shrink-0">FOMO, FOBO y<br>lo irremplazable en la IA</a>
+                <a href="#" title="[URL placeholder]" class="card w-64 flex-shrink-0">Portafolio web gatuno</a>
+                <a href="#" title="[URL placeholder]" class="card w-64 flex-shrink-0">Evolución profesional</a>
             </div>
         </div>
     </section>
