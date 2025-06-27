@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isabel C. Montoya V. - Multilingual Professional</title>
+    <title>{{ t('title_main') }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -116,16 +116,15 @@
                 <span class="block w-6 h-0.5 bg-gray-700"></span>
             </button>
             <div class="absolute right-0 mt-2 w-48 bg-white rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
-                <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</a>
-                <a href="#examples" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Creative writing</a>
-                <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact & CV</a>
+                <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">{{ t('nav_services') }}</a>
+                <a href="#examples" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">{{ t('nav_examples') }}</a>
+                <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">{{ t('nav_contact') }}</a>
             </div>
         </div>
     </div>
     <section id="professional-info" class="flex flex-col items-center mb-6 px-4">
         <p class="text-xl font-semibold text-[#4B5563] text-center leading-relaxed">
-            Isabel C. Montoya V. | Multilingual professional | Translator, MA | Biologist, BSc Hons
-        </p>
+            {{ t('hero_tagline') }}
     </section>
     <section id="profile-picture" class="flex flex-col items-center mb-12 px-4">
         <div class="rounded-full overflow-hidden w-48 h-48 mb-6 border-4 border-white shadow-lg">
@@ -133,33 +132,33 @@
         </div>
     </section>
     <section id="languages" class="w-full max-w-7xl flex justify-center space-x-6 mb-20 p-4">
-        <div class="bubble flex-shrink-0"><span>ESPAÑOL</span><span><i>native</i></span></div>
-        <div class="bubble flex-shrink-0"><span>FRANÇAIS</span><span><i>native</i></span></div>
+        <div class="bubble flex-shrink-0"><span>ESPAÑOL</span><span><i>{{ t('section_languages') }}</i></span></div>
+        <div class="bubble flex-shrink-0"><span>FRANÇAIS</span><span><i>{{ t('section_languages') }}</i></span></div>
         <div class="bubble flex-shrink-0"><span>ENGLISH</span><span><i>C1</i></span></div>
         <div class="bubble flex-shrink-0"><span>DEUTSCH</span><span><i>C1</i></span></div>
     </section>
     <section id="services" class="w-full max-w-7xl flex flex-col items-center mb-20 p-4">
         <div class="text-3xl font-bold text-[#4B5563] mb-8 text-center flex-shrink-0">
-            The services I offer
+            {{ t('section_services_title') }}
         </div>
         <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 w-full md:w-auto justify-center">
             <div class="card service-card relative overflow-hidden h-40 w-64 flex-shrink-0">
-                <div class="front-text">Non-AI<br>creative writing</div>
-                <div class="back-text">As a former scientist,<br>I carry out the research needed.<br><br>I'm up for every challenge!</div>
+                <div class="front-text">{{ t('svc_writing_front') }}</div>
+                <div class="back-text">{{ t('svc_writing_back') }}</div>
             </div>
             <div class="card service-card relative overflow-hidden h-40 w-64 flex-shrink-0">
-                <div class="front-text">Non-AI<br>translation</div>
-                <div class="back-text">From English & German<br>into Spanish & French.<br><br>No AI needed!</div>
+                <div class="front-text">{{ t('svc_translation_front') }}</div>
+                <div class="back-text">{{ t('svc_translation_back') }}</div>
             </div>
             <div class="card service-card relative overflow-hidden h-40 w-64 flex-shrink-0">
-                <div class="front-text">And finally...<br>Yes AI!</div>
+                <div class="front-text">{{ t('svc_ai_front') }}</div>
                 <div class="back-text">Julius · Botpress · Ideogram<br>Canva · Make · Resend<br><br>ChatGPT · Claude<br>Gemini · DeepSeek</div>
             </div>
         </div>
     </section>
     <section id="examples" class="w-full max-w-7xl flex flex-col items-center mb-20 p-4">
         <div class="text-3xl font-bold text-[#4B5563] mb-8 text-center flex-shrink-0">
-            A selection of my creative writing
+            {{ t('section_examples_title') }}
         </div>
         <div class="flex flex-col space-y-6 w-full md:w-auto justify-center">
             <div class="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6">
@@ -177,7 +176,7 @@
         </div>
     </section>
     <section id="contact" class="w-full max-w-7xl flex flex-col sm:flex-row items-center justify-evenly p-4 text-[#4B5563]">
-        <p class="text-lg font-semibold mb-4 sm:mb-0">Contact: <a href="mailto:icmv.work@gmail.com" class="text-[#4B5563] hover:underline">icmv.work@gmail.com</a></p>
+        <p class="text-lg font-semibold mb-4 sm:mb-0">{{ t('contact_label') }} <a href="mailto:icmv.work@gmail.com" class="text-[#4B5563] hover:underline">icmv.work@gmail.com</a></p>
         <p class="text-lg font-semibold mb-4 sm:mb-0"><a href="#" class="text-[#4B5563] hover:underline">CV</a></p>
         <div class="w-24 h-24 flex-shrink-0">
             <a href="https://www.linkedin.com/in/isabelcmontoyav-languages-es-fr-en-de?fromQR=1" target="_blank" rel="noopener"><img src=https://raw.githubusercontent.com/IC-MV/writing-translation-AI-services/main/LinkedIn%20QR%20code.jpg alt="LinkedIn QR code for Isabel C. Montoya V." class="w-full h-full object-cover"></a>
