@@ -7,28 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* --- Base layout and gradient --- */
         body {
-            position: relative; /* needed for ::before overlay */
+            position: relative;
             font-family: 'Nunito Sans', 'Open Sans', sans-serif;
             background: linear-gradient(to bottom, #FFC0CB, #ADD8E6, #F0F8FF);
             background-attachment: fixed;
             background-position: center;
             overflow-x: hidden;
         }
-
-        /* --- Pattern overlay --- */
         body::before {
             content: "";
             position: fixed;
             inset: 0;
             background: url('https://raw.githubusercontent.com/IC-MV/writing-translation-AI-services/main/Plant%20background.jpeg') center/cover no-repeat;
-            opacity: 0.2; /* tweak this value for stronger / lighter pattern visibility */
-            pointer-events: none; /* ensures clicks go through */
-            z-index: -1; /* keeps overlay beneath page content */
+            opacity: 0.2;
+            pointer-events: none;
+            z-index: -1;
         }
-
-        /* --- Animated language bubbles --- */
         .bubble {
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 9999px;
@@ -63,8 +58,6 @@
                 transform: translateX(0);
             }
         }
-
-        /* --- Reusable card component --- */
         .card {
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 0.75rem;
@@ -77,8 +70,6 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-
-        /* --- Service cards flip text --- */
         .service-card .front-text, .service-card {
             transition: opacity 0.3s ease-in-out;
             position: absolute;
@@ -113,7 +104,6 @@
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center py-8">
-<!-- Hamburger Menu -->
     <div class="absolute top-4 right-4 z-50">
         <div class="relative group">
             <button class="flex flex-col space-y-1">
@@ -128,27 +118,22 @@
             </div>
         </div>
     </div>
-    <!-- Page Content Starts -->
-
     <section id="professional-info" class="flex flex-col items-center mb-6 px-4">
         <p class="text-xl font-semibold text-[#4B5563] text-center leading-relaxed">
             Isabel C. Montoya V. | Multilingual professional | Translator, MA | Biologist, BSc Hons
         </p>
     </section>
-
     <section id="profile-picture" class="flex flex-col items-center mb-12 px-4">
         <div class="rounded-full overflow-hidden w-48 h-48 mb-6 border-4 border-white shadow-lg">
             <img src="https://raw.githubusercontent.com/IC-MV/writing-translation-AI-services/main/LinkedIn%20picture.JPG" alt="IC MV Picture" class="w-full h-full object-cover">
         </div>
     </section>
-
     <section id="languages" class="w-full max-w-7xl flex justify-center space-x-6 mb-20 p-4">
         <div class="bubble flex-shrink-0"><span>ESPAÑOL</span><span><i>native</i></span></div>
         <div class="bubble flex-shrink-0"><span>FRANÇAIS</span><span><i>native</i></span></div>
         <div class="bubble flex-shrink-0"><span>ENGLISH</span><span><i>C1</i></span></div>
         <div class="bubble flex-shrink-0"><span>DEUTSCH</span><span><i>C1</i></span></div>
     </section>
-
     <section id="services" class="w-full max-w-7xl flex flex-col items-center mb-20 p-4">
         <div class="text-3xl font-bold text-[#4B5563] mb-8 text-center flex-shrink-0">
             The services I offer
@@ -168,7 +153,6 @@
             </div>
         </div>
     </section>
-
     <section id="examples" class="w-full max-w-7xl flex flex-col items-center mb-20 p-4">
         <div class="text-3xl font-bold text-[#4B5563] mb-8 text-center flex-shrink-0">
             A selection of my creative writing
@@ -188,7 +172,6 @@
             </div>
         </div>
     </section>
-
     <section id="contact" class="w-full max-w-7xl flex flex-col sm:flex-row items-center justify-evenly p-4 text-[#4B5563]">
         <p class="text-lg font-semibold mb-4 sm:mb-0">Contact: <a href="mailto:icmv.work@gmail.com" class="text-[#4B5563] hover:underline">icmv.work@gmail.com</a></p>
         <p class="text-lg font-semibold mb-4 sm:mb-0"><a href="#" class="text-[#4B5563] hover:underline">CV</a></p>
@@ -196,6 +179,5 @@
             <a href="https://www.linkedin.com/in/isabelcmontoyav-languages-es-fr-en-de?fromQR=1" target="_blank" rel="noopener"><img src=https://raw.githubusercontent.com/IC-MV/writing-translation-AI-services/main/LinkedIn%20QR%20code.jpg alt="LinkedIn QR code for Isabel C. Montoya V." class="w-full h-full object-cover"></a>
         </div>
     </section>
-
 </body>
 </html>
