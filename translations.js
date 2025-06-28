@@ -5,7 +5,7 @@ const i18n = {
     nav_services: "Services",
     section_languages: "native",
     nav_examples: "Creative writing",
-    nav_contact:  "Contact & CV",
+    nav_contact:  "Contact/CV/QR",
     hero_tagline: "Isabel C. Montoya V. | Multilingual professional | Translator, MA | Biologist, BSc Hons",
     section_services_title: "The services I offer",
     svc_writing_front: "Non-AI<br>creative writing",
@@ -14,22 +14,24 @@ const i18n = {
     svc_translation_back: "From English & German<br>into Spanish & French.<br><br>No AI needed!",
     svc_ai_front: "And finally...<br>Yes AI!",
     section_examples_title: "A selection of my creative writing",
-    contact_label: "Contact & CV"
+    contact_label: "Contact",
+    qr_label: "LinkedIn QR code"
   },
   es: {
     title_main: "Isabel C. Montoya V. - Profesional multilingüe",
     nav_services: "Servicios",
     section_languages: "nativo",
     nav_examples: "Escritura creativa",
-    nav_contact:  "Contacto y CV",
+    nav_contact:  "Contacto/CV/QR",
     hero_tagline: "Isabel C. Montoya V. | Profesional multilingüe | Traductora, MA | Bióloga, BSc Hons",
     section_services_title: "Mis servicios",
     svc_writing_front: "Redacción<br>creativa sin IA",
-    svc_writing_back: "En mi calidad de científica,<br>investigo lo que sea necesario.<br><br>¡Me apunto al reto que sea!",
+    svc_writing_back: "En mi calidad de científica,<br>investigo todo lo necesario.<br><br>¡Me apunto al reto que sea!",
     svc_translation_front: "Traducción<br>sin IA",
     svc_translation_back: "Del inglés y del alemán<br>al español y al francés.<br><br>¡Sin IA!",
     svc_ai_front: "Y por último...<br>¡con IA!",
     section_examples_title: "Mi portafolio de escritura creativa",
-    contact_label: "Contacto y CV"
+    contact_label: "Contacto",
+    qr_label: "Código QR LinkedIn"
   }
 };
