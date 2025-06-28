@@ -1,35 +1,26 @@
-/* language-switcher.js */
-/* 1) reads the i18n object from translations.js
-   2) swaps English ↔ Spanish text on demand
-   Robust version: replaces **all** template markers inside each element
-   without nuking the rest of its HTML. */
-
+/* language-switcher.js
+   Reads the global i18n object from translations.js
+   and swaps text between EN ↔ ES.
+*/
 let currentLang = localStorage.getItem('lang') || 'en';
 
-// lookup helper
-function t(key) {
-  return (i18n[currentLang] && i18n[currentLang][key]) || i18n.en[key] || key;
+const t = key =>
+  (i18n[currentLang] && i18n[currentLang][key]) ||
+  i18n.en[key] || key;
+
+function applyTranslations () {
+  document.documentElement.lang = currentLang;
+  document.title = t('title_main');
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.innerHTML = t(el.dataset.i18n);
+  });
 }
 
-// iterate once on DOMContentLoaded *or* when we deliberately switch
-+function applyTranslations() {
-+  // set <html lang="…"> for accessibility / SEO
-+  document.documentElement.lang = currentLang;
-+
-+  // translate only elements you marked with data-i18n
-+  document.querySelectorAll('[data-i18n]').forEach(el => {
-+    const key = el.dataset.i18n;
-+    el.innerHTML = t(key);
-+  });
-+
-+  // update the <title> too
-+  document.title = t('title_main');
-+}
+// run once the DOM is ready
+document.addEventListener('DOMContentLoaded', applyTranslations);
 
-// initial run
-applyTranslations();
-
-// make the switcher globally visible for the buttons
+// exposed to the buttons:  <button onclick="switchLang('es')">ES</button>
 window.switchLang = lang => {
   currentLang = lang;
   localStorage.setItem('lang', lang);
