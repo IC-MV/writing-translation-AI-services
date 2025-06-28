@@ -1,28 +1,28 @@
-/* language-switcher.js
-   Very small helper that
-   1) reads the i18n object from translations.js
+/* language-switcher.js */
+/* 1) reads the i18n object from translations.js
    2) swaps English ↔ Spanish text on demand
-*/
+   Robust version: replaces **all** template markers inside each element
+   without nuking the rest of its HTML. */
 
-// ---------- basic lookup ----------
+let currentLang = localStorage.getItem('lang') || 'en';
+
+// lookup helper
 function t(key) {
-  // fall back to English if something is missing
-  return i18n[currentLang][key] || i18n.en[key] || key;
+  return (i18n[currentLang] && i18n[currentLang][key]) || i18n.en[key] || key;
 }
 
-// ---------- apply to every element that contains {{ t('key') }} ----------
+// iterate once on DOMContentLoaded *or* when we deliberately switch
 function applyTranslations() {
   document.querySelectorAll('*').forEach(el => {
-    const m = el.innerHTML.match(/{{\s*t\('(.+?)'\)\s*}}/);
-    if (m) el.innerHTML = t(m[1]);
+    el.innerHTML = el.innerHTML.replace(/{{\\s*t\\('(.+?)'\\)\\s*}}/g, (_, key) => t(key));
   });
 }
 
-// ---------- language handling ----------
-let currentLang = localStorage.getItem('lang') || 'en';
-applyTranslations();                        // run once on page load
+// initial run
+applyTranslations();
 
-window.switchLang = function (lang) {       // make it global for buttons
+// make the switcher globally visible for the buttons
+window.switchLang = lang => {
   currentLang = lang;
   localStorage.setItem('lang', lang);
   applyTranslations();
