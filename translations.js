@@ -14,7 +14,7 @@ const i18n = {
     svc_translation_back: "From English & German<br>into Spanish & French.<br><br>No AI needed!",
     svc_ai_front: "And finally...<br>Yes AI!",
     section_examples_title: "A selection of my creative writing",
-    contact_label: "Contact"
+    contact_label: "Contact & CV"
   },
   es: {
     title_main: "Isabel C. Montoya V. - Profesional multilingüe",
@@ -30,6 +30,6 @@ const i18n = {
     svc_translation_back: "Del inglés y del alemán<br>al español y al francés.<br><br>¡Sin IA!",
     svc_ai_front: "Y por último...<br>¡con IA!",
     section_examples_title: "Mi portafolio de escritura creativa",
-    contact_label: "Contacto"
+    contact_label: "Contacto y CV"
   }
 };
